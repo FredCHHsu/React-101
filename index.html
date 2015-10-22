@@ -30,6 +30,7 @@
             <Widget txt = {txt} update = {this.update}/>
             <Widget txt = {txt} update = {this.update}/>
             <Widget txt = {txt} update = {this.update}/>
+            <Btn>I <Love /> React</Btn>
           </div>
         );
       }
@@ -42,6 +43,22 @@
             <input type="text" onChange={this.props.update} />
             <h1>{this.props.txt}</h1>
           </div>
+        );
+      }
+    });
+
+    var Btn = React.createClass({
+      render: function() {
+        return (
+          <button>{this.props.children}</button>
+        );
+      }
+    });
+
+    var Love = React.createClass({
+      render: function() {
+        return (
+          <div> Love LOVE Love</div>
         );
       }
     });
